@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <Version>1.0.1.0</Version>
+        <Version>1.1.0.7</Version>
         <PackageProjectUrl>https://github.com/DarkArtek/XIVITASanctuary</PackageProjectUrl>
         <RootNamespace>XIVITASanctuary</RootNamespace>
         <AssemblyName>XIVITASanctuary</AssemblyName>
@@ -11,11 +11,13 @@
         <TargetFramework>net6.0-windows</TargetFramework>
         <Platforms>x64</Platforms>
         <PlatformTarget>x64</PlatformTarget>
-        <LangVersion>preview</LangVersion>
+        <LangVersion>latest</LangVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
         <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
