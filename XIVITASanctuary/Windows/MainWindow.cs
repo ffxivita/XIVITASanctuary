@@ -250,7 +250,7 @@
     }
 
     private void DrawAboutTab() {
-        ImGui.Text("XIVITASanctuary, careto da DarkArtek.");
+        ImGui.Text("XIVITASanctuary, creato da DarkArtek.");
 
         if (ImGui.Button("Vedi su GitHub"))
             Process.Start(new ProcessStartInfo {
