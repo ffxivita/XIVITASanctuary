@@ -76,7 +76,24 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="DalamudPackager" Version="2.1.8" />
+        <PackageReference Include="DalamudPackager" Version="2.1.8"/>
     </ItemGroup>
+    <ProjectExtensions>
+        <DalamudPlugin>
+            <ApiLevel>7</ApiLevel>
+            <Author>DarkArtek</Author>
+            <Name>XIVITASanctuary</Name>
+            <Punchline>Il migliore strumento per la vostra isola!</Punchline>
+            <Description>Un plugin che migliora la vostra esperienza in Island Sanctuary. Cosa Fa:\\n\\n- Vi segnala gli item da raccogliere nella mappa\\ntodo-list per Gathering e crafting, mostrando quali di materiali avrete bisogno \\n- (pianificato) Miglior vista dell'inventario.\\n- Widget per accedere velocemente alle informazioni.
+            </Description>
+            <IconUrl></IconUrl>
+            <Tags>
+                <Tag>Gathering</Tag>
+                <Tag>Guide</Tag>
+                <Tag>XIVITA</Tag>
+            </Tags>
+            <Hidden>False</Hidden>
+        </DalamudPlugin>
+    </ProjectExtensions>
 
 </Project>
