@@ -9,7 +9,8 @@
             "extensions": [
                 "ms-dotnettools.csharp",
                 "wayou.vscode-todo-highlight",
-                "vivaxy.vscode-conventional-commits"
+                "vivaxy.vscode-conventional-commits",
+                "ms-azuretools.vscode-docker"
             ]
         }
     }
