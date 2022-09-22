@@ -15,5 +15,5 @@ XIVITA Guide è un plugin scritto con la libreria [Dalamud](https://github.com/g
 XIVITA Guide non è al momento rilasciato in versione stable e sta ancora venendo controllato e sistemato dei vari bug presenti. Se comunque questo non vi spaventa, potete tranquillamente installarlo dalla [Nostra Repo](https://plugins.ffxivita.it)
 
 ## Contribuire
-Sono accettati e ringraziati i vari contributi tecnici e non tecnici da tutti! Se volete dare una mano, buttate l'occhio sulla guida su [Come Contribuire](CONTRIB.MD) per cominciare.
+Sono accettati e ringraziati i vari contributi tecnici e non tecnici da tutti! Se volete dare una mano, buttate l'occhio sulla guida su [Come Contribuire](CONTRIB.md) per cominciare.
 
