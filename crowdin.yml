@@ -1,0 +1,36 @@
+commit_message: 'Chore: Localization updates for %original_file_name% [no ci]'
+append_commit_message: true
+preserve_hierarchy: true
+files:
+  - source: /src/Resources/Localization/Duty/en/A Realm Reborn/Dungeons
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/A Realm Reborn/Dungeons/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/A Realm Reborn/Trials
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/A Realm Reborn/Trials/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/A Realm Reborn/AllianceRaids
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/A Realm Reborn/AllianceRaids/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Heavensward/AllianceRaids
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Heavensward/AllianceRaids/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Heavensward/Dungeons
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Heavensward/Dungeons/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Heavensward/Trials
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Heavensward/Trials/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Stormblood/Dungeons
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Stormblood/Dungeons/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Stormblood/AllianceRaids
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Stormblood/AllianceRaids/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Stormblood/Trials
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Stormblood/Trials/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Shadowbringers/Trials
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Shadowbringers/Trials/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Shadowbringers/AllianceRaids
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Shadowbringers/AllianceRaids/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Shadowbringers/Dungeons
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Shadowbringers/Dungeons/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Endwalker/Dungeons
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Endwalker/Dungeons/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Endwalker/AllianceRaids
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Endwalker/AllianceRaids/%original_file_name%
+  - source: /src/Resources/Localization/Duty/en/Endwalker/Trials
+    translation: /src/Resources/Localization/Duty/%two_letters_code%/Endwalker/Trials/%original_file_name%
+  - source: /src/Resources/Localization/Plugin/*_Localizable.json
+    translation: /%original_path%/%two_letters_code%.json
