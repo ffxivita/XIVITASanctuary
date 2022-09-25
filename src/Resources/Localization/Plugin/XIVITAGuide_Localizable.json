@@ -200,7 +200,7 @@
     "description": "TStrings.get_DutyInfoTitle"
   },
   "DutyInfo.NoDuty": {
-    "message": "No duty selected, use /kikolist to see all available duties.",
+    "message": "No duty selected, use /xivitalist to see all available duties.",
     "description": "TStrings.get_DutyInfoNoneSelected"
   },
   "DutyInfo.NotUnlocked": {
