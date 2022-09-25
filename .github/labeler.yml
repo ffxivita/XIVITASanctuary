@@ -1,0 +1,14 @@
+changes | resources:
+  - "XIVITAGuide/Resources/**/*"
+
+changes | ci:
+  - ".github/workflows/**/*"
+
+changes | plugin:
+  - "XIVITAGuide/**/*.cs"
+
+changes | assets:
+  - ".assets/**"
+
+changes | docs:
+  - "**.md"

@@ -1,7 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-<PropertyGroup>
+  <PropertyGroup>
     <Version>1.4.1.0</Version>
     <PackageProjectUrl>https://github.com/ffxivita/XIVITAGuide</PackageProjectUrl>
+    <RootNamespace>XIVITAGuide</RootNamespace>
+    <AssemblyName>XIVITAGuide</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -34,7 +37,7 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
-   <PropertyGroup Condition="'$(IsCI)' == 'true'">
+  <PropertyGroup Condition="'$(IsCI)' == 'true'">
       <DalamudLibPath>Dalamud</DalamudLibPath>
   </PropertyGroup>
 
@@ -73,5 +76,4 @@
 		  <HintPath>$(DalamudLibPath)CheapLoc.dll</HintPath>
 	  </Reference>
   </ItemGroup>
-  
 </Project>
