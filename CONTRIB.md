@@ -1,8 +1,8 @@
 # Come Contribuire
 ### Paragrafi
 - [Localizzazione](#localizzazione)
-- [Codice](#contribuire attraverso il codice)
-- [Scrittura Guide](#contribuire con le Guide)
+- [Codice](#contribuire-attraverso-il-codice)
+- [Scrittura Guide](#contribuire-con-le-guide)
 
 ---
 ## Localizzazione
