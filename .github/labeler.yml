@@ -1,11 +1,11 @@
 changes | resources:
-  - "XIVITAGuide/Resources/**/*"
+  - "src/Resources/**/*"
 
 changes | ci:
   - ".github/workflows/**/*"
 
 changes | plugin:
-  - "XIVITAGuide/**/*.cs"
+  - "src/**/*.cs"
 
 changes | assets:
   - ".assets/**"

@@ -44,8 +44,8 @@ jobs:
         shell: bash
         run: |
           dotnet build --configuration Release --nologo -p:AssemblyVersion=${{ steps.tag_name.outputs.TAG }} -p:AssemblyInformationalVersion=${{ steps.tag_name }}
-          sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/latest.zip  >> checksums.txt
-          sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/XIVITAGuide.json >> checksums.txt
+          sha512sum src/bin/x64/Release/XIVITAGuide/latest.zip  >> checksums.txt
+          sha512sum src/bin/x64/Release/XIVITAGuide/XIVITAGuide.json >> checksums.txt
           cat checksums.txt
 
       - name: Release
@@ -54,6 +54,6 @@ jobs:
           generate_release_notes: true
           prerelease: false
           files: |
-            XIVITAGuide/bin/x64/Release/XIVITAGuide/latest.zip
-            XIVITAGuide/bin/x64/Release/XIVITAGuide/XIVITAGuide.json
+            src/bin/x64/Release/XIVITAGuide/latest.zip
+            src/bin/x64/Release/XIVITAGuide/XIVITAGuide.json
             checksums.txt
