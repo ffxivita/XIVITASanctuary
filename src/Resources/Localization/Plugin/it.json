@@ -200,7 +200,7 @@
     "description": "TStrings.get_DutyInfoTitle"
   },
   "DutyInfo.NoDuty": {
-    "message": "No duty selected, use /xivitalist to see all available duties.",
+    "message": "Nessun duty selezionato, usa /xivitalist per vedere tutti i duty disponibili.",
     "description": "TStrings.get_DutyInfoNoneSelected"
   },
   "DutyInfo.NotUnlocked": {
