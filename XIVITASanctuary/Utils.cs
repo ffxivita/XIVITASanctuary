@@ -1,12 +1,15 @@
-﻿namespace XIVITASanctuary
+﻿
+using System;
+using System.Collections.Generic;
+using Dalamud.Logging;
+using FFXIVClientStructs.FFXIV.Client.Game;
+using FFXIVClientStructs.FFXIV.Client.UI.Agent;
+using ImGuiScene;
+using Lumina.Excel.GeneratedSheets;
+using XIVITASanctuary.Creature;
+using MapType = FFXIVClientStructs.FFXIV.Client.UI.Agent.MapType;
+namespace XIVITASanctuary
 {
-    using System.Collections.Generic;
-    using Dalamud.Logging;
-    using FFXIVClientStructs.FFXIV.Client.Game;
-    using FFXIVClientStructs.FFXIV.Client.UI.Agent;
-    using Lumina.Excel.GeneratedSheets;
-    using MapType = FFXIVClientStructs.FFXIV.Client.UI.Agent.MapType;
-
     public static class Utils {
     public static unsafe void OpenGatheringMarker(uint teri, int x, int y, int radius, string name) {
         var agent = AgentMap.Instance();

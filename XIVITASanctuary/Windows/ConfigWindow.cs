@@ -1,4 +1,4 @@
-﻿namespace XIVITASanctuary
+﻿namespace XIVITASanctuary.Windows
 {
     using System;
     using System.Numerics;

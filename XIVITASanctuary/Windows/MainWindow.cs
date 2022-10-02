@@ -1,18 +1,19 @@
-﻿namespace XIVITASanctuary
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Numerics;
-    using Dalamud.Interface;
-    using Dalamud.Interface.Windowing;
-    using Dalamud.Logging;
-    using ImGuiNET;
-    using ImGuiScene;
-    using Lumina.Excel;
-    using Lumina.Excel.GeneratedSheets;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Numerics;
+using Dalamud.Interface;
+using Dalamud.Interface.Components;
+using Dalamud.Interface.Windowing;
+using ImGuiNET;
+using ImGuiScene;
+using Dalamud.Logging;
+using Lumina.Excel;
+using Lumina.Excel.GeneratedSheets;
 
+namespace XIVITASanctuary.Windows
+{
     public class MainWindow : Window, IDisposable {
     private Plugin Plugin;
 
@@ -61,11 +62,11 @@
             ImGui.TableSetupColumn("Icona");
             ImGui.TableSetupColumn("Nome");
             ImGui.TableSetupColumn("Pulsanti");
-            ImGui.TableSetupColumn("Tool richiesto");
+            ImGui.TableSetupColumn("Tool Richiesto");
             ImGui.TableHeadersRow();
 
             foreach (var item in gatheringItems) {
-                var reqToolString = item.RequiredTool != null ? item.RequiredTool.Name : "Nessuno";
+                var reqToolString = item.RequiredTool != null ? item.RequiredTool.Name : "None";
 
                 if (!item.Name.ToLower().Contains(gatheringSearchFilter.ToLower())
                     && !reqToolString.ToString().ToLower().Contains(gatheringSearchFilter.ToLower())) continue;
@@ -91,7 +92,7 @@
 
                 ImGui.SameLine();
 
-                if (ImGui.Button("Aggiungi alla Lista##XIVITASanctuary_GatheringAddTodo_" + item.ItemID)) {
+                if (ImGui.Button("Aggiungi a lista ToDo##XIVITASanctuary_GatheringAddTodo_" + item.ItemID)) {
                     var rowID = itemPouchSheet.First(x => {
                         var itemValue = x.Item.Value;
                         if (itemValue == null) return false;
@@ -112,7 +113,7 @@
         var contentRegionAvail = ImGui.GetContentRegionAvail();
 
         {
-            var imguiSucks = ImGui.CalcTextSize("ImGui fa cagare, lol").X;
+            var imguiSucks = ImGui.CalcTextSize("Isleworks ImGui non funziona bene").X;
             var childSize = contentRegionAvail with { X = imguiSucks };
             ImGui.BeginChild("XIVITASanctuary_WorkshopListSearchChild", childSize);
 
@@ -150,9 +151,9 @@
 
             ImGui.SameLine();
 
-            ImGui.Text($"{item.Name}\nDurata: {item.CraftingTime} ore");
+            ImGui.Text($"{item.Name}\nDuration: {item.CraftingTime} hours");
 
-            if (ImGui.Button("Aggiungi alla lista##XIVITASanctuary_WorkshopAddTodo_" + item.ItemID)) {
+            if (ImGui.Button("Aggiungi a lista ToDo##XIVITASanctuary_WorkshopAddTodo_" + item.ItemID)) {
                 foreach (var (requiredMat, matCount) in item.Materials) {
                     Utils.AddToTodoList(Plugin.Configuration, requiredMat, matCount);
                 }
@@ -160,7 +161,7 @@
                 Plugin.WindowSystem.GetWindow("XIVITASanctuary Widget").IsOpen = true;
             }
 
-            ImGui.Text("Materiali:");
+            ImGui.Text("Materials:");
             foreach (var (requiredMat, matCount) in item.Materials) {
                 var itemPouchRow = itemPouchSheet.GetRow(requiredMat);
                 var itemPouchItem = itemPouchRow.Item.Value;
@@ -179,9 +180,9 @@
                             Vector2.One);
                         ImGui.SameLine();
                         ImGui.TextWrapped(
-                            $"Tool Richiesto: {(mat.RequiredTool != null ? mat.RequiredTool.Name : "Nessuno")}");
+                            $"Required tool: {(mat.RequiredTool != null ? mat.RequiredTool.Name : "None")}");
 
-                        if (ImGui.Button("Mostra in Mappa##XIVITASanctuary_WorkshopShowOnMap_" + mat.ItemID)) {
+                        if (ImGui.Button("Show on map##XIVITASanctuary_WorkshopShowOnMap_" + mat.ItemID)) {
                             var teri = Plugin.IslandSanctuary.RowId;
 
                             Utils.OpenGatheringMarker(teri, mat.X, mat.Y, mat.Radius, mat.Name);
@@ -220,9 +221,9 @@
             ImGui.TableSetupColumn("Dimensione/Icona");
             ImGui.TableSetupColumn("Nome");
             ImGui.TableSetupColumn("Posizione");
-            ImGui.TableSetupColumn("Requisiti");
-            ImGui.TableSetupColumn("Drop Garantito");
-            ImGui.TableSetupColumn("Drop");
+            ImGui.TableSetupColumn("Requisiti di Spawn");
+            ImGui.TableSetupColumn("Drop Garantito ");
+            ImGui.TableSetupColumn("Chance di Drop");
 
             ImGui.TableHeadersRow();
 
@@ -261,7 +262,7 @@
                 ImGui.TableSetColumnIndex(2);
                 ImGui.Text(item.IngameX.ToString("F1") + ", " + item.IngameY.ToString("F1"));
                 ImGui.SameLine();
-                ImGui.PushID("ReSanctuary_CreatureMap_" + (int)item.CreatureID);
+                ImGui.PushID("XIVITASanctuary_CreatureMap_" + (int)item.CreatureID);
                 if (ImGuiComponents.IconButton(FontAwesomeIcon.MapMarkerAlt)) {
                     var teri = Plugin.IslandSanctuary.RowId;
 
@@ -338,7 +339,7 @@
     private void DrawTodoTab() {
         var todoList = Plugin.Configuration.TodoList;
 
-        if (ImGui.Button("Apri Widget ToDo")) {
+        if (ImGui.Button("Apri Widget Todo")) {
             Plugin.WindowSystem.GetWindow("XIVITASanctuary Widget").IsOpen = true;
         }
 
@@ -383,7 +384,7 @@
     private void DrawAboutTab() {
         ImGui.Text("XIVITASanctuary, made by Artek of FFXIVITA.");
 
-        if (ImGui.Button("Codice Sorgente"))
+        if (ImGui.Button("Sorgente"))
             Process.Start(new ProcessStartInfo {
                 FileName = "https://github.com/DarkArtek/XIVITASanctuary",
                 UseShellExecute = true
@@ -391,7 +392,7 @@
 
         ImGui.SameLine();
 
-        if (ImGui.Button("Pagina Plugins"))
+        if (ImGui.Button("Apri sito Plugins"))
             Process.Start(new ProcessStartInfo {
                 FileName = "https://plugins.ffxivita.it",
                 UseShellExecute = true

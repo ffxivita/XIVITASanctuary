@@ -333,5 +333,6 @@ namespace XIVITASanctuary.Creature
         }
 
         return data;
-    }     
+    }
+}
 }
