@@ -13,13 +13,14 @@
     using Lumina.Excel;
     using Lumina.Excel.GeneratedSheets;
 
-    public class  WidgetWindow : Window, IDisposable
-    {
-        private Plugin Plugin;
-        private RawExcelSheet itemPouchSheet;
-        private ExcelSheet<Item> itemSheet;
-        
-        private Dictionary<uint, TextureWrap> todoTextureCache;
+    public class WidgetWindow : Window, IDisposable {
+    private Plugin Plugin;
+
+    
+    private RawExcelSheet itemPouchSheet;
+    private ExcelSheet<Item> itemSheet;
+
+    private Dictionary<uint, TextureWrap> todoTextureCache;
 
     public WidgetWindow(Plugin plugin) : base("XIVITASanctuary Widget") {
         SizeConstraints = new WindowSizeConstraints {
@@ -49,17 +50,9 @@
     }
 
     private void DrawGarbage(uint id, int amount, Item item, int has) {
-        TextureWrap? icon;
-        if (todoTextureCache.ContainsKey(id)) {
-            icon = todoTextureCache[id];
-        } else {
-            icon = Plugin.DataManager.GetImGuiTextureIcon(item.Icon);
-            todoTextureCache[id] = icon;
-        }
-
         var iconSize = ImGui.GetTextLineHeight() * 1.25f;
         var iconSizeVec = new Vector2(iconSize, iconSize);
-        ImGui.Image(icon.ImGuiHandle, iconSizeVec, Vector2.Zero, Vector2.One);
+        ImGui.Image(Utils.IconCache(item.Icon).ImGuiHandle, iconSizeVec, Vector2.Zero, Vector2.One);
 
         ImGui.SameLine();
 
@@ -81,7 +74,7 @@
     public override void Draw() {
         var todoList = Plugin.Configuration.TodoList;
 
-        // i just got home from class and i am exhausted. here is some very bad unoptimized code\
+        // sono al secondo giorno di ferie e sono già esausto. Ecco il codice ottimizzato\
         foreach (var (id, amount) in todoList) {
             var itemPouchItem = itemPouchSheet.GetRow(id);
             var item = itemSheet.GetRow(itemPouchItem.ReadColumn<uint>(0));
@@ -98,5 +91,5 @@
             if (has >= amount) DrawGarbage(id, amount, item, has);
         }
     }
-    }
+}
 }

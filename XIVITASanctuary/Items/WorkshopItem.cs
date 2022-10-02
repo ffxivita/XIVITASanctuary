@@ -5,8 +5,7 @@
     using Lumina.Excel;
     using Lumina.Excel.GeneratedSheets;
 
-    public class WorkshopItem : BaseItem
-    {
+    public class WorkshopItem : BaseItem {
         public ushort CraftingTime;
         public ushort Value;
         public List<(ushort requiredMat, ushort matCount)> Materials = new();
@@ -15,7 +14,6 @@
             Name = item.Name;
             Item = item;
             ItemID = item.RowId;
-            Icon = Plugin.DataManager.GetImGuiTextureIcon(item.Icon);
             RowID = workshopItem.RowId;
             UIIndex = (byte)workshopItem.RowId;
 

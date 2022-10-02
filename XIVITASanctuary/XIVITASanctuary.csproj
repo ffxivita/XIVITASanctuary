@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <Version>1.1.0.8</Version>
+        <Version>1.1.0.9</Version>
         <PackageProjectUrl>https://github.com/DarkArtek/XIVITASanctuary</PackageProjectUrl>
         <RootNamespace>XIVITASanctuary</RootNamespace>
         <AssemblyName>XIVITASanctuary</AssemblyName>
