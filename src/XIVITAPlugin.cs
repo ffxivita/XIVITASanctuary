@@ -19,10 +19,9 @@ internal class XIVITAPlugin : IDalamudPlugin
         pluginInterface.Create<PluginService>();
         PluginService.Initialize();
 
-        // #if !DEBUG
-        PluginService.ResourceManager.Update();
-        // #endif
-
+#if !DEBUG
+        PluginService.ResourceManager.UpdateResources();
+#endif
     }
 
     /// <summary>
