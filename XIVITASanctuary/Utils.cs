@@ -13,7 +13,7 @@ namespace XIVITASanctuary
     public static class Utils {
     public static unsafe void OpenGatheringMarker(uint teri, int x, int y, int radius, string name) {
         var agent = AgentMap.Instance();
-        PluginLog.Debug("current teri/map: {currentTeri} {currentMap}", agent->CurrentTerritoryId, agent->CurrentMapId);
+        PluginLog.Debug("teri/map corrente: {currentTeri} {currentMap}", agent->CurrentTerritoryId, agent->CurrentMapId);
         if (teri != agent->CurrentTerritoryId) return;
 
         agent->AddGatheringTempMarker(x, y, radius);
