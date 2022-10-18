@@ -1,4 +1,4 @@
-FROM  ghcr.io/ahdcreative/xivita-daladocker:latest
+FROM  ghcr.io/ffxivita/docker-dalamud:latest
 
 # Optout of telemtry.
 ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
