@@ -5,7 +5,7 @@ using XIVITAGuide.Base;
 using XIVITAGuide.Localization;
 using XIVITAGuide.UI.Windows.Editor;
 using XIVITAGuide.UI.Windows.GuideViewer;
-using XIVITAGuide.UI.Windows.List;
+using XIVITAGuide.UI.Windows.GuideList;
 using XIVITAGuide.UI.Windows.Settings;
 
 namespace XIVITAGuide.Managers
