@@ -14,8 +14,8 @@ namespace XIVITAGuide.Base
 #pragma warning disable CS8618 // Injection is handled by the Dalamud Plugin Framework here.
     internal sealed class PluginService
     {
-        [PluginService] internal static DalamudPluginInterface PluginInterface {get; private set;}
-        [PluginService] internal static Dalamud.Game.Command.CommandManager Commands {get; private set;}
+        [PluginService] internal static DalamudPluginInterface PluginInterface { get; private set; }
+        [PluginService] internal static Dalamud.Game.Command.CommandManager Commands { get; private set; }
         [PluginService] internal static ClientState ClientState { get; private set; }
         [PluginService] internal static Framework Framework { get; private set; }
 
@@ -28,7 +28,7 @@ namespace XIVITAGuide.Base
         /// <summary>
         ///     Initializes the service class.
         /// </summary>
-        public static void Initialize()
+        internal static void Initialize()
         {
             ResourceManager = new ResourceManager();
             Configuration = PluginInterface?.GetPluginConfig() as Configuration ?? new Configuration();
@@ -36,12 +36,14 @@ namespace XIVITAGuide.Base
             CommandManager = new CommandManager();
             IPC = new IPCLoader();
 
-            #if !DEBUG
-                ResourceManager.Uodate();
-                Configuration.RemoveInvalidEnumValues();
-            #endif
+#if !DEBUG
+            ResourceManager.Update();
+            Configuration.RemoveInvalidEnumValues();
+#endif
+
             PluginLog.Debug("PluginService(Initialize): Successfully initialized plugin services.");
         }
+
         /// <summary>
         ///     Disposes of the service class.
         /// </summary>
@@ -51,6 +53,8 @@ namespace XIVITAGuide.Base
             ResourceManager.Dispose();
             WindowManager.Dispose();
             CommandManager.Dispose();
+
+            PluginLog.Debug("PluginService(Initialize): Successfully disposed of plugin services.");
         }
     }
 }
