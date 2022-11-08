@@ -6,7 +6,7 @@ using XIVITAGuide.Localization;
 using XIVITAGuide.Types;
 using XIVITAGuide.UI.ImGuiBasicComponents;
 
-namespace XIVITAGuide.Ui.ImGuiFullComponents.GuideListTable
+namespace XIVITAGuide.UI.ImGuiFullComponents.GuideListTable
 {
     /// <summary>
     ///     A component for displaying a list of guides.
