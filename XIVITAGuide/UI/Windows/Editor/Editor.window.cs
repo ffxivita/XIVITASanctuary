@@ -314,6 +314,5 @@ namespace XIVITAGuide.UI.Windows.Editor
                 ImGui.EndTabBar();
             }
         }
-
     }
 }
