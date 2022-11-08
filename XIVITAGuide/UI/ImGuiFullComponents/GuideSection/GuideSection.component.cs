@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using ImGuiNET;
 using XIVITAGuide.Types;
-using XIVITAGuide.Ui.ImGuiBasicComponents;
+using XIVITAGuide.UI.ImGuiBasicComponents;
 using XIVITAGuide.UI.ImGuiFullComponents.MechanicTable;
 
 namespace XIVITAGuide.UI.ImGuiFullComponents.GuideSection

@@ -8,7 +8,7 @@ using ImGuiNET;
 using XIVITAGuide.Base;
 using XIVITAGuide.Localization;
 using XIVITAGuide.Types;
-using XIVITAGuide.Ui.ImGuiBasicComponents;
+using XIVITAGuide.UI.ImGuiBasicComponents;
 using XIVITAGuide.UI.ImGuiFullComponents.GuideSection;
 
 namespace XIVITAGuide.UI.Windows.GuideViewer

@@ -6,7 +6,7 @@ using XIVITAGuide.Base;
 using XIVITAGuide.Localization;
 using XIVITAGuide.Managers;
 using XIVITAGuide.Types;
-using XIVITAGuide.Ui.Windows.Settings;
+using XIVITAGuide.UI.Windows.Settings;
 
 namespace XIVITAGuide.UI.Windows.GuideViewer
 {

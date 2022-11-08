@@ -7,7 +7,7 @@ using XIVITAGuide.UI.ImGuiBasicComponents;
 using XIVITAGuide.UI.ImGuiFullComponents.IPCProviderCombo;
 using XIVITAGuide.UI.ImGuiFullComponents.MechanicHiderCombo;
 
-namespace XIVITAGuide.Ui.Windows.Settings
+namespace XIVITAGuide.UI.Windows.Settings
 {
     public sealed class SettingsWindow : Window, IDisposable
     {
