@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - "**.cs"
+      - "XIVITAGuide/**.cs"
     types: [ready_for_review, opened, synchronize, reopened]
 
 jobs:
@@ -52,18 +52,18 @@ jobs:
           export IsCI=true
 
       - name: Build Plugin (Dev)
-        working-directory: src/
+        working-directory: XIVITAGuide/
         run: dotnet build
         
       - name: Build Plugin (Release)
-        working-directory: src/
+        working-directory: XIVITAGuide/
         run: dotnet build --configuration Release
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: ./src/bin
+          path: ./XIVITAGuide/bin
           
       - name: Edit Comment (Success)
         uses: thollander/actions-comment-pull-request@v1

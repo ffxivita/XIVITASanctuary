@@ -11,7 +11,8 @@
 				"wayou.vscode-todo-highlight",
 				"vivaxy.vscode-conventional-commits",
 				"ms-azuretools.vscode-docker",
-				"Kcfe.lint"
+				"Kcfe.lint",
+				"GitHub.copilot"
 			]
         }
     }

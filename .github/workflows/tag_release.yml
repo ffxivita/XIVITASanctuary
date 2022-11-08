@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
       - name: Set up .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.0.x
 
@@ -44,8 +44,8 @@ jobs:
         shell: bash
         run: |
           dotnet build --configuration Release --nologo -p:AssemblyVersion=${{ steps.tag_name.outputs.TAG }} -p:AssemblyInformationalVersion=${{ steps.tag_name }}
-          sha512sum src/bin/x64/Release/XIVITAGuide/latest.zip  >> checksums.txt
-          sha512sum src/bin/x64/Release/XIVITAGuide/XIVITAGuide.json >> checksums.txt
+          sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/latest.zip  >> checksums.txt
+          sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/XIVITAGuide.json >> checksums.txt
           cat checksums.txt
 
       - name: Release
@@ -54,6 +54,6 @@ jobs:
           generate_release_notes: true
           prerelease: false
           files: |
-            src/bin/x64/Release/XIVITAGuide/latest.zip
-            src/bin/x64/Release/XIVITAGuide/XIVITAGuide.json
+            XIVITAGuide/bin/x64/Release/XIVITAGuide/latest.zip
+            XIVITAGuide/bin/x64/Release/XIVITAGuide/XIVITAGuide.json
             checksums.txt

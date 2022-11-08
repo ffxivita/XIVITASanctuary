@@ -1,0 +1,42 @@
+name: 📃 Guide Issue Report
+description: Segnalate problemi o suggerimenti per le guide.
+title: "Report Issue Guide"
+ody:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un problema con una guida.
+
+        Compila il template sottostante per permetterci di lavorare al meglio la tua richiesta.
+
+  - type: checkboxes
+    attributes:
+      label: Preflight
+      description: Assicurati di aver completato tutti gli step seguenti.
+      options:
+        - label: Ho cercato nelle segnalazioni correnti e non ho trovato quello che cercavo, o quelle esistenti non combaciano con la mia richiesta.
+          required: true
+
+  - type: input
+    attributes:
+      label: Nome della Guida?
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Lingua della Guida?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Riassunto
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: I tuoi suggerimenti
+    validations:
+      required: true
