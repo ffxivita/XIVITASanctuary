@@ -1,6 +1,6 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using Dalamud.Configuration;
 using Dalamud.Logging;
 using XIVITAGuide.IPC;
@@ -8,7 +8,7 @@ using XIVITAGuide.Types;
 
 namespace XIVITAGuide.Base
 {
-    /// <summary>
+    // <summary>
     ///     Provides access to and determines the Plugin configuration.
     /// </summary>
     [Serializable]
@@ -42,7 +42,7 @@ namespace XIVITAGuide.Base
 
             ///     Whether or not to show the support button in the UI.
             /// </summary>
-            public bool DonateButtonShown { get; set; } = true;
+            public bool DonateButtonShown { get; set; } = false;
 
             /// <summary>
             ///     Whether or not to automatically show/hide a guide when entering/leaving a duty.

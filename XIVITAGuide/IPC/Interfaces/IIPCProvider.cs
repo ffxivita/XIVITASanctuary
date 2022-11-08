@@ -1,6 +1,6 @@
-using System
+using System;
 
-namespace XIVITAGuide.IPC.interfaces
+namespace XIVITAGuide.IPC.Interfaces
 {
     /// <summary>
     ///     Provides a common interface that IPC providers must implement to be used by the plugin.

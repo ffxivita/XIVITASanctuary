@@ -1,11 +1,13 @@
 using System;
-using System.Linq;
 using System.Collections.Generic;
-using XIVITAGuide.Base;
+using System.Linq;
+using FFXIVClientStructs.FFXIV.Client.Game;
+using XIVITAGuide.Attributes;
+using Newtonsoft.Json;
 
 namespace XIVITAGuide.Types
 {
-    #pragma warning disable CA1051 // Do not declare visible instance fields
+#pragma warning disable CA1051 // Do not declare visible instance fields
     /// <summary>
     ///     Represents a guide for an in-game duty.
     /// </summary>
