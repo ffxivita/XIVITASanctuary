@@ -4,6 +4,7 @@ on:
   pull_request:
     branches: [main]
     types: [ready_for_review, opened, synchronize, reopened]
+  workflow_dispatch
 
 jobs:
   Validate:
