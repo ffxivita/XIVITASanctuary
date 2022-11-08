@@ -42,7 +42,7 @@ namespace XIVITAGuide.Base
 
             ///     Whether or not to show the support button in the UI.
             /// </summary>
-            public bool DonateButtonShown { get; set; } = false;
+            public bool DonateButtonShown { get; set; } = true;
 
             /// <summary>
             ///     Whether or not to automatically show/hide a guide when entering/leaving a duty.

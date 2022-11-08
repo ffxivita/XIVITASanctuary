@@ -33,7 +33,7 @@ namespace XIVITAGuide.Base
         /// <summary>
         ///     The support button URL.
         /// </summary>
-        internal static readonly string DonateButtonUrl = "https://github.com/sponsors/ffxivita";
+        internal static readonly string DonateButtonUrl = "https://paypal.me/ffxivita";
 
         /// <summary>
         ///     The path to the plugin's resources folder with trailing slashes, relative to the plugin assembly location with trailing slashes.
