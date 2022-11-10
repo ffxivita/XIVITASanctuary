@@ -6,9 +6,7 @@
   "Expansion": 0,
   "Level": 24,
   "UnlockQuestID": 66050,
-  "TerritoryIDs": [
-    1039
-  ],
+  "TerritoryIDs": [1039],
   "Bosses": [
     {
       "Name": "Coeurl O' Nine Tails",
