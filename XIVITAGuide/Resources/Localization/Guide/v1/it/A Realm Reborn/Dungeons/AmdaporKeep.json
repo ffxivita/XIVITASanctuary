@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "Name": "Amdapor Keep",
+  "Difficulty": 0,
+  "Type": 0,
+  "Expansion": 0,
+  "Level": 50,
+  "UnlockQuestID": 66671,
+  "TerritoryIDs": [
+    167
+  ],
+  "Sections": [
+    {
+      "Type": 0,
+      "Name": "Psycheflayer",
+      "Phases": [
+        {
+          "Strategy": "Quando si entra per la prima volta, ci sarà un solo nemico chiamato Lunatic Priest. una volta che questo nemico raggiungerà i 50% HP evocherà il Flayer Pschee. I giocatori dovrebbero concentrarsi sull'uccisione del Lunatic Priest prima di combattere con lo Psycheflayer, inquanto il Lunatic Priest farà danno AOE. \n\nDurante tutta la lotta, Psycheflayer, spawnerà degli add che casteranno delle AOE. I giocatori dovrebbero assicurarsi di ucciderli non appena escono.",
+          "Mechanics": [
+            {
+              "Name": "Water",
+              "Description": "Attacco mirato che infligge una piccola quantità di danni",
+              "Type": 6
+            },
+            {
+              "Name": "Void Thunder III",
+              "Description": "Attacco che infligge danno moderato",
+              "Type": 6
+            },
+            {
+              "Name": "Canker",
+              "Description": "Al bersaglio, oltre al danno, verrà inflitto il debuff Disease",
+              "Type": 6
+            },
+            {
+              "Name": "Mind Melt",
+              "Description": "Danno moderato Raidwide",
+              "Type": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": 0,
+      "Name": "Demon Wall",
+      "Phases": [
+        {
+          "Strategy": "Demon Wall seguirà sempre un pattern, userà sempre Liquefy quattro volte prima di usare il repel. \n\nDopo due usi di Repel, Demon Wall evocerà due Adds chiamate Bloodlapper che possono infliggere il debuff Paralisi. Assicurarsi di ucciderli non appena escono.",
+          "Mechanics": [
+            {
+              "Name": "Muder Hole",
+              "Description": "Attacco mirato che infligge una piccola quantità di danni",
+              "Type": 6
+            },
+            {
+              "Name": "Repel",
+              "Description": "Dopo che Demon Wall finisce di castare repel, tutti i giocatori saranno spinti via dal boss.",
+              "Type": 10
+            },
+            {
+              "Name": "Liquefy",
+              "Description": "AoE lineare che può provenire dai due lati della piattaforma o dal centro. Infligge danni elevati e infliggerà Heavy se colpiti dalla AOE al centro & Slow se colpiti dalla AOE laterale",
+              "Type": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": 0,
+      "Name": "Anantaboga",
+      "Phases": [
+        {
+          "Strategy": "Durante tutta la lotta Anantaboga userà Imminent Catastrophe per generare globi rossi che infliggono danni a chiunque in linea d'aria. Per evitare di prender danni, dovrete nascondervi dietro ad una delle 4 statue attorno all'arena. Inoltre, il cast sveglierà una delle statue trasformandolo in un add. i giocatori dovranno uccidere l'add ed evitare i suoi attacchi AOE",
+          "Mechanics": [
+            {
+              "Name": "Tail Drive",
+              "Description": "AoE posteriore conica che infligge danno elevato ed applica Concussion, causando danno continuo a chi viene colpito",
+              "Type": 2
+            },
+            {
+              "Name": "Rotten Breath",
+              "Description": "Cono frontale AOE che infligge danni elevati e infligge Diseade a chiunque venga colpito",
+              "Type": 2
+            },
+            {
+              "Name": "Imminent Catastrophe",
+              "Description": "Dopo il cast, una sferà rossa comparirà al centro dell'arena, infliggendo danno moderato a chiunque sia nella linea d'aria",
+              "Type": 7
+            },
+            {
+              "Name": "Plague Dance",
+              "Description": "Raggio di colore viola che colpisce random. Dopo poco comparirà una sfera rossa dove il player è stato colpito; infliggendo danno a chiunque sia attorno",
+              "Type": 6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
