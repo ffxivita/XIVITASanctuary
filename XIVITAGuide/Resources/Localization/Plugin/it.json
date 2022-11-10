@@ -1,0 +1,266 @@
+{
+    "Commands.DutyList.Help": {
+        "message": "Mostra la Duty List",
+        "description": "TCommands.get_GuideListHelp"
+    },
+    "Commands.Settings.Help": {
+        "message": "Mostra il menu delle impostazioni",
+        "description": "TCommands.get_SettingsHelp"
+    },
+    "Commands.Editor.Help": {
+        "message": "Attiva/disattiva l'editor dei Duty",
+        "description": "TCommands.get_EditorHelp"
+    },
+    "Commands.Info.Help": {
+        "message": "Apri/Chiudi la finestra delle guide",
+        "description": "TCommands.get_InfoHelp"
+    },
+    "Window.Settings": {
+        "message": "{0} - impostazioni",
+        "description": "TWindowNames..cctor"
+    },
+    "Window.GuideList": {
+        "message": "{0} - Elenco Guide",
+        "description": "TWindowNames..cctor"
+    },
+    "Window.GuideViewer": {
+        "message": "{0} - Elenco Guide",
+        "description": "TWindowNames..cctor"
+    },
+    "Window.GuideEditor": {
+        "message": "{0} - Editor Duty",
+        "description": "TWindowNames..cctor"
+    },
+    "Generics.Donate": {
+        "message": "Dona",
+        "description": "TGenerics.get_Donate"
+    },
+    "Generics.OpenFile": {
+        "message": "Apri File",
+        "description": "TGenerics.get_OpenFile"
+    },
+    "Generics.SaveFile": {
+        "message": "Salva File",
+        "description": "TGenerics.get_SaveFile"
+    },
+    "Generics.Search": {
+        "message": "Cerca",
+        "description": "TGenerics.get_Search"
+    },
+    "Generics.Guide": {
+        "message": "Guide",
+        "description": "TGenerics.get_Guide"
+    },
+    "Generics.InDuty": {
+        "message": "In Duty",
+        "description": "TGenerics.get_InDuty"
+    },
+    "Generics.Mechanic": {
+        "message": "Meccanica",
+        "description": "TGenerics.get_Mechanic"
+    },
+    "Generics.Description": {
+        "message": "Descrizione",
+        "description": "TGenerics.get_Description"
+    },
+    "Generics.Level": {
+        "message": "Livello",
+        "description": "TGenerics.get_Level"
+    },
+    "Generics.Type": {
+        "message": "Tipo",
+        "description": "TGenerics.get_Type"
+    },
+    "Generics.Enabled": {
+        "message": "Abilitato",
+        "description": "TGenerics.get_Enabled"
+    },
+    "Generics.Disabled": {
+        "message": "Disattivata",
+        "description": "TGenerics.get_Disabled"
+    },
+    "Editor.Problems": {
+        "message": "Problemi",
+        "description": "TEditor.get_Problems"
+    },
+    "Editor.Preview": {
+        "message": "Anteprima",
+        "description": "TEditor.get_Preview"
+    },
+    "Editor.Clear": {
+        "message": "Cancella",
+        "description": "TEditor.get_Clear"
+    },
+    "Editor.Format": {
+        "message": "Formato",
+        "description": "TEditor.get_Format"
+    },
+    "Editor.Metadata": {
+        "message": "Metadata",
+        "description": "TEditor.get_Metadata"
+    },
+    "Editor.EnumList": {
+        "message": "Lista Enum",
+        "description": "TEditor.get_EnumList"
+    },
+    "Editor.CannotParse": {
+        "message": "Impossibile analizzare il file, impossibile eseguire l'anteprima.",
+        "description": "TEditor.get_CannotParseNoPreview"
+    },
+    "Editor.ContributingGuide": {
+        "message": "Guida per contribuire",
+        "description": "TEditor.get_ContributingGuide"
+    },
+    "Editor.Problem.Unsupported": {
+        "message": "Il Duty contiene ID non validi e/o non è supportato da questa versione del plugin.",
+        "description": "TEditor.get_ProblemUnsupported"
+    },
+    "Editor.Problem.None": {
+        "message": "Nessun problema rilevato.",
+        "description": "TEditor.get_NoProblems"
+    },
+    "Editor.FileTooBig": {
+        "message": "Il tuo file è troppo grande per essere caricato nell'editor.",
+        "description": "TEditor.get_FileTooLarge"
+    },
+    "Editor.FileLoaded": {
+        "message": "Il tuo file è stato caricato con successo.",
+        "description": "TEditor.get_FileSuccessfullyLoaded"
+    },
+    "Editor.FileSaved": {
+        "message": "File salvato.",
+        "description": "TEditor.get_FileSuccessfullySaved"
+    },
+    "Settings.Configuration": {
+        "message": "Impostazioni",
+        "description": "TSettings.get_Configuration"
+    },
+    "Settings.AutOpenGuideForDuty": {
+        "message": "Auto Apri la guida per il duty",
+        "description": "TSettings.get_AutoOpenGuideForDuty"
+    },
+    "Settings.AutoOpenDuty.Tooltip": {
+        "message": "Apri/nascondi automaticamente la guida per il duty quando entri/esci.",
+        "description": "TSettings.get_SettingsAutoOpenInDutyTooltip"
+    },
+    "Settings.ShortedGuideText": {
+        "message": "Testo Guida Accorciato",
+        "description": "TSettings.get_ShortenGuideText"
+    },
+    "Settings.ShortenGuideText.Tooltip": {
+        "message": "Abbreviare il testo in tutte le guide quando possiile per renderlo più accessibile e a risparmiare spazio.",
+        "description": "TSettings.get_ShortenGuideTextTooltip"
+    },
+    "Settings.ShowDonateButton": {
+        "message": "Mostra Pulsante Donazione",
+        "description": "TSettings.get_ShowDonateButton"
+    },
+    "Settings.ShowDonateButton.Tooltip": {
+        "message": "Mostra il pulsante donazione dentro al plugin per aiutare lo sviluppo.",
+        "description": "TSettings.get_ShowDonateButtonTooltip"
+    },
+    "Settings.HideLockedGuides": {
+        "message": "Nascondi Guide Bloccate",
+        "description": "TSettings.get_HideLockedGuides"
+    },
+    "Settings.HideLockedGuides.Tooltip": {
+        "message": "Nasconde le guide che non hai ancora sbloccato dalla lista e impedisce di aprirle nel visualizzatore delle guide.\nATTENZIONE: Disattivando questa opzione comporterà spoiler per le guide che non hai ancora sbloccato.",
+        "description": "TSettings.get_HideLockedGuidesTooltip"
+    },
+    "Settings.HiddenMechanics": {
+        "message": "Meccaniche Nascoste",
+        "description": "TSettings.get_HiddenMechanics"
+    },
+    "Settings.HiddenMechanics.Tooltip": {
+        "message": "Nasconde certe tipologie di meccaniche, impedendone la visualizzazione dentro tutte le guide.",
+        "description": "TSettings.get_HiddenMechanicsTooltip"
+    },
+    "Settings.EnabledIntegrations": {
+        "message": "Integrazioni abilitate",
+        "description": "TSettings.get_EnabledIntegrations"
+    },
+    "Settings.EnabledIntegrations.Tooltip": {
+        "message": "Abilita o disabilita le integrazioni con altri plugin. Si prega di notare che i plugin devono essere installati affinché l'integrazione funzioni.",
+        "description": "TSettings.get_EnabledIntegrationsTooltip"
+    },
+    "GuideViewer.NoInfoAvailable": {
+        "message": "Non ci sono informazioni disponibili per questa guida al momento.",
+        "description": "TGuideViewer.get_NoInfoAvailable"
+    },
+    "GuideViewer.ReportIssueWithGuide": {
+        "message": "Segnala un problema con la guida",
+        "description": "TGuideViewer.get_ReportIssueWithGuide"
+    },
+    "GuideViewer.UnlockWindowMovement": {
+        "message": "Sblocca movimento finestra",
+        "description": "TGuideViewer.get_UnlockWindowMovement"
+    },
+    "GuideViewer.LockWindowMovement": {
+        "message": "Blocca movimento finestra",
+        "description": "TGuideViewer.get_LockWindowMovement"
+    },
+    "GuideViewer.UnlockWindowResize": {
+        "message": "Sblocca ridimensionamento finestra",
+        "description": "TGuideViewer.get_UnlockWindowResize"
+    },
+    "GuideViewer.LockWindowResize": {
+        "message": "Blocca ridimensionamento finestra",
+        "description": "TGuideViewer.get_LockWindowResize"
+    },
+    "GuideViewer.ToggleSettingsWindow": {
+        "message": "Attiva/Disattiva finestra impostazioni",
+        "description": "TGuideViewer.get_ToggleSettingsWindow"
+    },
+    "GuideViewer.GuideHeading": {
+        "message": "Guida per {0}",
+        "description": "TGuideViewer.GuideHeading"
+    },
+    "GuideViewer.NoGuideSelected": {
+        "message": "Nessun duty selezionato, usa /xivitalist per vedere tutti i duty disponibili.",
+        "description": "TGuideViewer.get_NoGuideSelected"
+    },
+    "GuideViewer.GuideInfoNotUnlocked": {
+        "message": "Non puoi visualizzare la guida per questo duty perché non lo hai ancora sbloccato.",
+        "description": "TGuideViewer.get_GuideNotUnlocked"
+    },
+    "GuideListTable.NoneFoundForType": {
+        "message": "Nessuna guida trovata per questo duty.",
+        "description": "TGuideListTable.get_NoneFoundForType"
+    },
+    "GuideListTable.NoGuidesUnlocked": {
+        "message": "Non hai ancora sbloccato nessuna guida per questa tipologia.",
+        "description": "TGuideListTable.get_NoGuidesUnlocked"
+    },
+    "GuideListTable.NoGuidesFoundForSearch": {
+        "message": "Nessun risultato trovato per la tua ricerca.",
+        "description": "TGuideListTable.get_NoGuidesFoundForSearch"
+    },
+    "GuideListTable.UnsupportedGuide": {
+        "message": "La guida per {0} è per una versione diversa del plugin e non può essere ancora caricata",
+        "description": "TGuideListTable.UnsupportedGuide"
+    },
+    "GuideListTable.NoGuideData": {
+        "message": "Non ci sono ancora dati per {0}.",
+        "description": "TGuideListTable.NoGuideData"
+    },
+    "GuideListTable.NoGuidesFilesDetected": {
+        "message": "Non sono stati rilevati file di guida, si prega di controllare l'installazione.",
+        "description": "TGuideListTable.get_NoGuidesFilesDetected"
+    },
+    "Types.Duty.Name.None": {
+        "message": "Guida Senza Nome",
+        "description": "TGuide..cctor"
+    },
+    "IPC.Wotsit.OpenGuideList": {
+        "message": "Apri Elenco Guide",
+        "description": "WotsitTranslations.get_WotsitIPCOpenGuideList"
+    },
+    "IPC.Wotsit.OpenGuideEditor": {
+        "message": "Apri Editor Duty",
+        "description": "WotsitTranslations.get_WotsitIPCOpenGuideEditor"
+    },
+    "IPC.Wotsit.OpenGuideFor": {
+        "message": "Apri guida per {0}",
+        "description": "WotsitTranslations.WotsitIPCOpenGuideFor"
+    }
+}
