@@ -6,9 +6,7 @@
   "Expansion": 0,
   "Level": 50,
   "UnlockQuestID": 70058,
-  "TerritoryIDs": [
-    1044
-  ],
+  "TerritoryIDs": [1044],
   "Sections": [
     {
       "Type": 1,
