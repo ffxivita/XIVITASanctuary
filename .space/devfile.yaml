@@ -7,9 +7,9 @@ attributes:
       type: Rider
 components:
   - name: image-build
-    image:
+    image: ghcr.io/ffxivita/docker-dalamud
     # (Required)
-    imageName: xivita-guide:latest
+    imageName: docker-dalamud:latest
     dockerfile:
       # (Optional) path to Docker context relative to projectRoot
       # by default, projectRoot is repository root
