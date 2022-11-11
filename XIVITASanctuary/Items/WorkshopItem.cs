@@ -1,10 +1,10 @@
-﻿namespace XIVITASanctuary
-{
-    using System;
-    using System.Collections.Generic;
-    using Lumina.Excel;
-    using Lumina.Excel.GeneratedSheets;
+﻿using System;
+using System.Collections.Generic;
+using Lumina.Excel;
+using Lumina.Excel.GeneratedSheets;
 
+namespace XIVITASanctuary
+{ 
     public class WorkshopItem : BaseItem {
         public ushort CraftingTime;
         public ushort Value;

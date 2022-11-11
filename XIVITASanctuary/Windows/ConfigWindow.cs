@@ -1,11 +1,11 @@
-﻿namespace XIVITASanctuary.Windows
-{
-    using System;
-    using System.Numerics;
-    using Dalamud.Interface;
-    using Dalamud.Interface.Windowing;
-    using ImGuiNET;
+﻿using System;
+using System.Numerics;
+using Dalamud.Interface;
+using Dalamud.Interface.Windowing;
+using ImGuiNET;
 
+namespace XIVITASanctuary.Windows
+{
     public class ConfigWindow : Window, IDisposable
     {
         private Configuration Configuration;

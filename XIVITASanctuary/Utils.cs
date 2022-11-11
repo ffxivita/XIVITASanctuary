@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Dalamud.Logging;
 using FFXIVClientStructs.FFXIV.Client.Game;

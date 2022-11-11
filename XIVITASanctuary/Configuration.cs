@@ -1,10 +1,9 @@
-﻿namespace XIVITASanctuary
+﻿using Dalamud.Configuration;
+using Dalamud.Plugin;
+using System;
+using System.Collections.Generic;
+namespace XIVITASanctuary
 {
-    using Dalamud.Configuration;
-    using Dalamud.Plugin;
-    using System;
-    using System.Collections.Generic;
-
     [Serializable]
     public class Configuration : IPluginConfiguration
     {
