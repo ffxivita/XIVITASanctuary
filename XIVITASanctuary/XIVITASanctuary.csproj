@@ -1,99 +1,78 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <Version>1.1.0.9</Version>
-        <PackageProjectUrl>https://github.com/DarkArtek/XIVITASanctuary</PackageProjectUrl>
-        <RootNamespace>XIVITASanctuary</RootNamespace>
-        <AssemblyName>XIVITASanctuary</AssemblyName>
-    </PropertyGroup>
+  <PropertyGroup>
+    <Version>1.1.0.9</Version>
+    <PackageProjectUrl>https://github.com/DarkArtek/XIVITASanctuary</PackageProjectUrl>
+    <RootNamespace>XIVITASanctuary</RootNamespace>
+    <AssemblyName>XIVITASanctuary</AssemblyName>
+  </PropertyGroup>
 
-    <PropertyGroup>
-        <TargetFramework>net6.0-windows</TargetFramework>
-        <Platforms>x64</Platforms>
-        <PlatformTarget>x64</PlatformTarget>
-        <LangVersion>latest</LangVersion>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
-        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
-        <Nullable>enable</Nullable>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <None Update="XIVITASanctuary.json">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
-    </ItemGroup>
+  <ItemGroup>
+    <None Update="XIVITASanctuary.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
-    <PropertyGroup>
-        <DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
-        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    </PropertyGroup>
+  <PropertyGroup>
+    <DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
 
-    <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">
-        <DalamudLibPath>$(DALAMUD_HOME)/</DalamudLibPath>
-        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    </PropertyGroup>
+  <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">
+    <DalamudLibPath>$(DALAMUD_HOME)/</DalamudLibPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
 
-    <PropertyGroup Condition="'$(IsCI)' == 'true'">
-        <DalamudLibPath>Dalamud</DalamudLibPath>
-    </PropertyGroup>
+  <PropertyGroup Condition="'$(IsCI)' == 'true'">
+    <DalamudLibPath>Dalamud</DalamudLibPath>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <Reference Include="FFXIVClientStructs">
-            <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
-        <Reference Include="Newtonsoft.Json">
-            <HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
-        <Reference Include="Dalamud">
-            <HintPath>$(DalamudLibPath)Dalamud.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
-        <Reference Include="ImGui.NET">
-            <HintPath>$(DalamudLibPath)ImGui.NET.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
-        <Reference Include="ImGuiScene">
-            <HintPath>$(DalamudLibPath)ImGuiScene.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
-        <Reference Include="Lumina">
-            <HintPath>$(DalamudLibPath)Lumina.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
-        <Reference Include="Lumina.Excel">
-            <HintPath>$(DalamudLibPath)Lumina.Excel.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
-        <Reference Include="CheapLoc">
-            <Private>false</Private>
-            <HintPath>$(DalamudLibPath)CheapLoc.dll</HintPath>
-        </Reference>
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="DalamudPackager" Version="2.1.8" />
-    </ItemGroup>
-    <ProjectExtensions>
-        <DalamudPlugin>
-            <ApiLevel>7</ApiLevel>
-            <Author>DarkArtek</Author>
-            <Name>XIVITASanctuary</Name>
-            <Punchline>Il migliore strumento per la vostra isola!</Punchline>
-            <Description>Un plugin che migliora la vostra esperienza in Island Sanctuary. Cosa Fa:\\n\\n- Vi segnala gli item da raccogliere nella mappa\\ntodo-list per Gathering e crafting, mostrando quali di materiali avrete bisogno \\n- (pianificato) Miglior vista dell'inventario.\\n- Widget per accedere velocemente alle informazioni.
-            </Description>
-            <IconUrl></IconUrl>
-            <Tags>
-                <Tag>Gathering</Tag>
-                <Tag>Guide</Tag>
-                <Tag>XIVITA</Tag>
-            </Tags>
-            <Hidden>False</Hidden>
-        </DalamudPlugin>
-    </ProjectExtensions>
-
+  <ItemGroup>
+    <PackageReference Include="DalamudPackager" Version="2.1.8"/>
+    <Reference Include="FFXIVClientStructs">
+      <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Dalamud">
+      <HintPath>$(DalamudLibPath)Dalamud.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ImGui.NET">
+      <HintPath>$(DalamudLibPath)ImGui.NET.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ImGuiScene">
+      <HintPath>$(DalamudLibPath)ImGuiScene.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Lumina">
+      <HintPath>$(DalamudLibPath)Lumina.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Lumina.Excel">
+      <HintPath>$(DalamudLibPath)Lumina.Excel.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="CheapLoc">
+      <Private>false</Private>
+      <HintPath>$(DalamudLibPath)CheapLoc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
