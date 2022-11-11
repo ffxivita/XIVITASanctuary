@@ -23,5 +23,6 @@ jobs:
           VALIDATE_YAML: false
           VALIDATE_GITLEAKS: false
           VALIDATE_MARKDOWN: false
+          VALIDATE_DOCKERFILE_HADOLINT: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
