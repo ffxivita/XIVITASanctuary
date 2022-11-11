@@ -31,7 +31,7 @@ jobs:
 
       - name: Download Dalamud Library
         run: |
-          cd XIVITAGuide
+          cd XIVITASanctuary
           wget -O Dalamud.zip https://goatcorp.github.io/dalamud-distrib/latest.zip
           unzip -o -d Dalamud Dalamud.zip
           export IsCI=true
