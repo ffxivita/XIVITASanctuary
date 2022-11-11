@@ -1,0 +1,11 @@
+changes | ci:
+  - ".github/workflows/**/*"
+
+changes | plugin:
+  - "XIVITASanctuary/**/*.cs"
+
+changes | assets:
+  - ".assets/**"
+
+changes | docs:
+  - "**.md"
