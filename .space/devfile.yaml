@@ -1,5 +1,0 @@
-schemaVersion: 2.2.0
-components:
-- name: dev-container
-  container:
-    image: ghcr.io/ffxivita/docker-dalamud:latest
