@@ -4,6 +4,7 @@ attributes:
     instanceType: regular
     editor:
       type: Rider
+    projectRoot: XIVITAGuide.sln
 components:
 - name: dev-container
   container:
