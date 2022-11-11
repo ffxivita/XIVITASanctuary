@@ -2,17 +2,9 @@ schemaVersion: 2.2.0
 attributes:
   space:
     instanceType: regular
-    projectRoot: XIVITAGuide.sln
     editor:
       type: Rider
 components:
-  - name: image-build
-    image: ghcr.io/ffxivita/docker-dalamud
-    # (Required)
-    imageName: docker-dalamud:latest
-    dockerfile:
-      # (Optional) path to Docker context relative to projectRoot
-      # by default, projectRoot is repository root
-      buildContext: .devcontainer
-      # (Required) path to Dockerfile relative to projectRoot
-      uri: .devcontainer/Dockerfile
+- name: dev-container
+  container:
+    image: ghcr.io/ffxivita/docker-dalamud:latest
