@@ -8,7 +8,7 @@ namespace XIVITAGuide.IPC
     public enum IPCProviders
     {
         [Description("Integrate with Wotsit to provide search capibilities.")]
-        Wotsit,
+        Wotsit = 0,
 
         // [Description("Integrate with Tippy to provide awful tooltips.")]
         // Tippy

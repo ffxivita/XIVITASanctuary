@@ -83,8 +83,6 @@ namespace XIVITAGuide.Managers
                         guideViewerScreen.IsOpen = !guideViewerScreen.IsOpen;
                     }
                     break;
-                default:
-                    break;
             }
         }
     }

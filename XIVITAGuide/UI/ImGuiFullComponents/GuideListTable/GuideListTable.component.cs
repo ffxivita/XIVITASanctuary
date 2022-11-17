@@ -64,7 +64,7 @@ namespace XIVITAGuide.UI.ImGuiFullComponents.GuideListTable
                             continue;
                         }
 
-                        if (!guide.Name.ToLower().Contains(filter.ToLower()))
+                        if (!guide.Name.Contains(filter, StringComparison.OrdinalIgnoreCase))
                         {
                             continue;
                         }

@@ -7,6 +7,7 @@ using Dalamud.Utility;
 using XIVITAGuide.Base;
 using XIVITAGuide.Localization;
 using XIVITAGuide.Types;
+using XIVITAGuide.Utils;
 using Newtonsoft.Json;
 
 namespace XIVITAGuide.UI.Windows.Editor
@@ -23,7 +24,7 @@ namespace XIVITAGuide.UI.Windows.Editor
         /// <summary>
         ///     Opens the contributing guide.
         /// </summary>
-        public static void OpenContributingGuide() => Util.OpenLink($"{PluginConstants.RepoUrl}blob/main/CONTRIB.md#guida-contributi");
+        public static void OpenContributingGuide() => Util.OpenLink($"{PluginConstants.RepoUrl}blob/main/CONTRIBUTING.md#guide-contribution");
 
         /// <summary>
         ///     Gets the players current territory.
@@ -43,9 +44,12 @@ namespace XIVITAGuide.UI.Windows.Editor
         /// <summary>
         ///     Handles the file select event
         /// </summary>
-        public string OnFileSelect(bool success, string file, string text)
+        /// <param name="cancelled"> Whether the file selection was cancelled or not. </param>
+        /// <param name="file"> The file that was selected. </param>
+        /// <param name="text"> The text that was loaded from the file. </param>
+        public string OnFileSelect(bool cancelled, string file, string text)
         {
-            if (!success)
+            if (!cancelled)
             {
                 return text;
             }
@@ -61,17 +65,20 @@ namespace XIVITAGuide.UI.Windows.Editor
             // Reject loading if the file length is beyond the character limit.
             if (fileText.Length > this.CharacterLimit)
             {
-                PluginService.PluginInterface.UiBuilder.AddNotification(TEditor.FileTooLarge, PluginConstants.PluginName, NotificationType.Error);
+                Notifications.ShowToast(message: TEditor.FileTooLarge, type: NotificationType.Error);
                 return text;
             }
 
-            PluginService.PluginInterface.UiBuilder.AddNotification(TEditor.FileSuccessfullyLoaded, PluginConstants.PluginName, NotificationType.Success);
+            Notifications.ShowToast(message: TEditor.FileSuccessfullyLoaded, type: NotificationType.Success);
             return fileText;
         }
 
         /// <summary>
         ///     Handles the file save event.
         /// </summary>
+        /// <param name="success"></param>
+        /// <param name="file"></param>
+        /// <param name="text"></param>
         public static void OnFileSave(bool success, string file, string text)
         {
             if (!success)
@@ -81,12 +88,13 @@ namespace XIVITAGuide.UI.Windows.Editor
 
             text = OnFormat(text);
             File.WriteAllText(file, text);
-            PluginService.PluginInterface.UiBuilder.AddNotification(TEditor.FileSuccessfullySaved, PluginConstants.PluginName, NotificationType.Success);
+            Notifications.ShowToast(message: TEditor.FileSuccessfullySaved, type: NotificationType.Success);
         }
 
         /// <summary>
         ///     Formats the given text into a better layout.
         /// </summary>
+        /// <param name="text"></param>
         public static string OnFormat(string text)
         {
             try
@@ -118,6 +126,7 @@ namespace XIVITAGuide.UI.Windows.Editor
         /// <summary>
         ///     Parses the given guideText into a Guide object or returns an Exception.
         /// </summary>
+        /// <param name="guideText"></param>
         public Tuple<Guide?, Exception?> ParseGuide(string guideText)
         {
             if (guideText == this.parsedGuideText && this.lastParseResult != null)
@@ -132,7 +141,6 @@ namespace XIVITAGuide.UI.Windows.Editor
                 this.lastParseResult = new Tuple<Guide?, Exception?>(JsonConvert.DeserializeObject<Guide>(guideText), null);
                 return this.lastParseResult;
             }
-
             catch (Exception e)
             {
                 this.lastParseResult = new Tuple<Guide?, Exception?>(null, e);

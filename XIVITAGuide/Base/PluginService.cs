@@ -11,7 +11,7 @@ namespace XIVITAGuide.Base
     /// <summary>
     ///     Provides access to necessary instances and services.
     /// </summary>
-#pragma warning disable CS8618 // Injection is handled by the Dalamud Plugin Framework here.
+#pragma warning disable CS8618, RCS1170  // Injection is handled by the Dalamud Plugin Framework here.
     internal sealed class PluginService
     {
         [PluginService] internal static DalamudPluginInterface PluginInterface { get; private set; }
@@ -24,6 +24,7 @@ namespace XIVITAGuide.Base
         internal static ResourceManager ResourceManager { get; private set; }
         internal static Configuration Configuration { get; private set; }
         internal static IPCLoader IPC { get; private set; }
+# pragma warning restore CS8618, RCS1170
 
         /// <summary>
         ///     Initializes the service class.

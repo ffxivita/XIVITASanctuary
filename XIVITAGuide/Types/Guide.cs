@@ -103,7 +103,7 @@ namespace XIVITAGuide.Types
                 /// <summary>
                 ///     The strategy for the phase.
                 /// </summary>
-                public string Strategy = "???";
+                public string Strategy = string.Empty;
 
                 /// <summary>
                 ///     The short strategy for the phase.
@@ -166,20 +166,32 @@ namespace XIVITAGuide.Types
             }
 
 #pragma warning disable IDE0075 // Simplify conditional expression
-            return !Enum.IsDefined(typeof(DutyDifficulty), this.Difficulty)
-                ? false
-                : this.Sections?.Any(s => !Enum.IsDefined(typeof(GuideSectionType), s.Type) || s.Phases?.Any(p => p.Mechanics?.Any(m => !Enum.IsDefined(typeof(GuideMechanics), m.Type)) == true) == true) != true;
+            return Enum.IsDefined(typeof(DutyDifficulty), this.Difficulty)
+                && this.Sections?.Any(s => !Enum.IsDefined(typeof(GuideSectionType), s.Type) || s.Phases?.Any(p => p.Mechanics?.Any(m => !Enum.IsDefined(typeof(GuideMechanics), m.Type)) == true) == true) != true;
 #pragma warning restore IDE0075 // Simplify conditional expression
         }
 
         /// <summary>
         ///     Get the canonical name for the duty/guide.
         /// </summary>
-        public string CanonicalName => !Enum.IsDefined(typeof(DutyDifficulty), this.Difficulty)
-                ? this.Name
-                : this.Difficulty != (int)DutyDifficulty.Normal
-                ? $"{this.Name} ({AttributeExtensions.GetNameAttribute(this.Difficulty)})"
-                : this.Name;
+        public string CanonicalName
+        {
+            get
+            {
+                if (!Enum.IsDefined(typeof(DutyDifficulty), this.Difficulty))
+                {
+                    return this.Name;
+                }
+                else if (this.Difficulty != (int)DutyDifficulty.Normal)
+                {
+                    return $"{this.Name} ({this.Difficulty.GetNameAttribute()})";
+                }
+                else
+                {
+                    return this.Name;
+                }
+            }
+        }
 
         /// <summary>
         ///     Get if the player has unlocked this duty/guide.

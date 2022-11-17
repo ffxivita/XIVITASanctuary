@@ -3,7 +3,7 @@
   "Name": "XIVITAGuide",
   "IntenalName": "XIVITAGuide",
   "Punchline": "XIVITA Guide è un plugin che permette ai giocatori di accedere facilmente a delle guide scritte per i vari content.",
-  "Description": "Punti Chiave:\n Apre la guida (se presente) in maniera automatica quando si entra in duty.\nTabella delle meccaniche con funzionalità di mostra / nascondi.\nLe guide possono essere localizzate anche in diverse lingue.\nLe guide si aggiornano in maniera indipendente dal plugin stesso.\nProtezione spoiler integrata.\nE tanto altro.",
+  "Description": "Punti Chiave: 1) Apre la guida (se presente) in maniera automatica quando si entra in duty. 2)Tabella delle meccaniche con funzionalità di mostra / nascondi. 3)Le guide possono essere localizzate anche in diverse lingue. 4)Le guide si aggiornano in maniera indipendente dal plugin stesso. 5)Protezione spoiler integrata. E tanto altro.",
   "Tags": ["Guide", "XIVITA"],
   "RepoUrl": "https://github.com/ffxivita/XIVITAGuide",
   "ImageUrls": [],
