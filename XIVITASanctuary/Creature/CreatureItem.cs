@@ -1,9 +1,10 @@
+using System.ComponentModel;
 using Lumina.Excel.GeneratedSheets;
 
 namespace XIVITASanctuary.Creature
 {
-    
-    public class CreatureExtraData {
+    public class CreatureExtraData
+    {
         public string Name;
         public int SpawnStart;
         public int SpawnEnd;
@@ -13,7 +14,8 @@ namespace XIVITASanctuary.Creature
         public ushort Radius;
     }
 
-    public class CreatureItem {
+    public class CreatureItem
+    {
         public string Name;
         public uint CreatureID;
         public byte CreatureType;

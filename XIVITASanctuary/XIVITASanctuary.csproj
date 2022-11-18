@@ -1,10 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.1.0.11</Version>
+    <Version>1.1.1.00</Version>
     <PackageProjectUrl>https://github.com/ffxivita/XIVITASanctuary</PackageProjectUrl>
     <RootNamespace>XIVITASanctuary</RootNamespace>
     <AssemblyName>XIVITASanctuary</AssemblyName>
+    <NoWarn>CS8618</NoWarn>
+    <NoWarn>CS8602</NoWarn>
+    <NoWarn>CS8601</NoWarn>
+    <NoWarn>CS8604</NoWarn>
+    <NoWarn>CA1051</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>
