@@ -1,4 +1,9 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>ahdcreative/renovate-config"]
+    "extends": ["github>ahdcreative/renovate-config"],
+    "packageRules": [
+        {
+            "groupName": ["xivita-dev"]
+        }
+    ]
 }
