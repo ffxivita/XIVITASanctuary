@@ -4,7 +4,8 @@
     "packageRules": [
         {
             "matchPackagePatterns": ["*"],
-            "groupName": ["xivita-dev"]
+            "reviewers": ["HsinVega842", "DarkArtek"],
+            "assignees": ["HsinVega842", "DarkArtek"]
         }
     ]
 }
