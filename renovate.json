@@ -3,6 +3,7 @@
     "extends": ["github>ahdcreative/renovate-config"],
     "packageRules": [
         {
+            "matchPackagePatterns": ["*"],
             "groupName": ["xivita-dev"]
         }
     ]
