@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Version>1.1.0.10</Version>
-    <PackageProjectUrl>https://github.com/DarkArtek/XIVITASanctuary</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/ffxivita/XIVITASanctuary</PackageProjectUrl>
     <RootNamespace>XIVITASanctuary</RootNamespace>
     <AssemblyName>XIVITASanctuary</AssemblyName>
   </PropertyGroup>

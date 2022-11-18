@@ -5,9 +5,7 @@ name: "Tag: Release"
 on:
   push:
     tags:
-      - 'v*.*.*.*'
-  
-
+      - "v*.*.*.*"
 
 permissions:
   contents: write
@@ -56,6 +54,6 @@ jobs:
           generate_release_notes: true
           prerelease: false
           files: |
-            XIVITAGuide/bin/x64/Release/XIVITASanctuary/latest.zip
-            XIVITAGuide/bin/x64/Release/XIVITASanctuary/XIVITASanctuary.json
+            XIVITASanctuary/bin/x64/Release/XIVITASanctuary/latest.zip
+            XIVITASanctuary/bin/x64/Release/XIVITASanctuary/XIVITASanctuary.json
             checksums.txt
