@@ -4,6 +4,10 @@
     "containerUser": "dev",
     "remoteUser": "dev",
     "postAttachCommand": "dotnet restore",
+    "workspaceFolder": "",
+    "runArgs": [
+        "--volume=${localworkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"
+    ],
     "customizations": {
         "vscode": {
             "extensions": [
