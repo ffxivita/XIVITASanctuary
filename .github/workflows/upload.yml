@@ -7,7 +7,7 @@ on:
 env:
   SOLUTION_NAME: XIVITASanctuary
   INTERNAL_NAME: XIVITASanctuary
-  RELEASE_DIR: ./bin/x64/Release/${{ env.INTERNAL_NAME }}
+  RELEASE_DIR: ./bin/x64/Release/XIVITASanctuary
   PERSONAL_PLUGIN_REPO: ffxivita/XIVITADalamudPlugins
   BRANCH: main
 
