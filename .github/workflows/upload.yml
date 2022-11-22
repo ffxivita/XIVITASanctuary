@@ -71,4 +71,4 @@ jobs:
           author_name: ${{ github.actor }}
           author_email: ${{ github.actor }}@users.noreply.github.com
           branch: ${{ env.BRANCH }}
-          message: Update ${{ env.INTERNAL_NAME }}
+          message: Update ${{ env.INTERNAL_NAME }} to ${{ steps.tag_name.outputs.TAG }}
