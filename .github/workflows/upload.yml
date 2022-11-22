@@ -1,0 +1,74 @@
+name: Upload to Plugin Directory
+on:
+  push:
+    tags:
+      - "v*.*.*.*"
+
+env:
+  SOLUTION_NAME: XIVITASanctuary
+  INTERNAL_NAME: XIVITASanctuary
+  RELEASE_DIR: ./bin/x64/Release/${{ env.INTERNAL_NAME }}
+  PERSONAL_PLUGIN_REPO: ffxivita/XIVITADalamudPlugins
+  BRANCH: main
+
+jobs:
+  Release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Download Dalamud Library
+        run: |
+          cd XIVITASanctuary
+          wget -O Dalamud.zip https://goatcorp.github.io/dalamud-distrib/latest.zip
+          unzip -o -d Dalamud Dalamud.zip
+          export IsCI=true
+
+      - name: Get Tag Name
+        id: tag_name
+        shell: bash
+        run: >-
+          echo "::set-output name=TAG::$(echo ${{ github.ref }} | sed 's/refs\/tags\///' | sed 's/v//')"
+
+      - name: Build Plugin
+        shell: bash
+        run: |
+          dotnet build --configuration Release --nologo -p:AssemblyVersion=${{ steps.tag_name.outputs.TAG }} -p:AssemblyInformationalVersion=${{ steps.tag_name }}
+          sha512sum XIVITASanctuary/bin/x64/Release/XIVITASanctuary/latest.zip  >> checksums.txt
+          sha512sum XIVITASanctuary/bin/x64/Release/XIVITASanctuary/XIVITASanctuary.json >> checksums.txt
+          cat checksums.txt
+  
+  Deploy:
+    needs: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.PERSONAL_PLUGIN_REPO }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ env.BRANCH }}
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: ${{ env.INTERNAL_NAME }}
+          path: dist/stable/${{ env.INTERNAL_NAME }}
+      - name: Commit and Push
+        uses: EndBug/add-and-commit@v7
+        with:
+          add: --all
+          author_name: ${{ github.actor }}
+          author_email: ${{ github.actor }}@users.noreply.github.com
+          branch: ${{ env.BRANCH }}
+          message: Update ${{ env.INTERNAL_NAME }}
