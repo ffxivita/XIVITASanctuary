@@ -4,9 +4,7 @@
   "InternalName": "XIVITASanctuary",
   "Punchline": "Il migliore strumento per la vostra isola!",
   "Description": "Un plugin che migliora la vostra esperienza in  Island Sanctuary. Cosa Fa: 1) Vi segnala gli item da raccogliere nella mappa 2) todo-list per Gathering & crafting, mostrando quali di materiali avrete bisogno 3) (pianificato) Miglior vista dell'inventario. 4) Widget per accedere velocemente alle informazioni.",
-  "Tags": ["Guide", "XIVITA"],
-  "RepoUrl": "https://github.com/ffxivita/XIVITASanctuary",
-  "AssemblyVersion": "1.1.0.11",
-  "ImageUrls": [],
-  "DalamudApiLevel": 7
+  "Tags": ["Guide", "XIVITA", "Island Sanctuary", "Gathering", "Crafting", "Inventory", "Widget"],
+  "CategoryTags": ["Inventory", "Gathering", "Crafting", "Widget"],
+  "RepoUrl": "https://github.com/ffxivita/XIVITASanctuary"
 }
