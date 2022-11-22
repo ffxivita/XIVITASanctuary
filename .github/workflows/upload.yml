@@ -60,7 +60,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ env.BRANCH }}
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: ${{ env.INTERNAL_NAME }}
           path: dist/stable/${{ env.INTERNAL_NAME }}
