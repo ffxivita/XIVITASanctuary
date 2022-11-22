@@ -65,7 +65,7 @@ jobs:
           name: ${{ env.INTERNAL_NAME }}
           path: dist/stable/${{ env.INTERNAL_NAME }}
       - name: Commit and Push
-        uses: EndBug/add-and-commit@v7
+        uses: EndBug/add-and-commit@v9
         with:
           add: --all
           author_name: ${{ github.actor }}
