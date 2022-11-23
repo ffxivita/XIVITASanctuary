@@ -3,7 +3,7 @@ on:
   push:
     tags:
       - "v*.*.*.*"
-
+  workflow_dispatch:
 env:
   SOLUTION_NAME: XIVITASanctuary
   INTERNAL_NAME: XIVITASanctuary
@@ -48,6 +48,10 @@ jobs:
           sha512sum XIVITASanctuary/bin/x64/Release/XIVITASanctuary/latest.zip  >> checksums.txt
           sha512sum XIVITASanctuary/bin/x64/Release/XIVITASanctuary/XIVITASanctuary.json >> checksums.txt
           cat checksums.txt
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          path: ${{ env.RELEASE_DIR }}
   
   Deploy:
     needs: Release
@@ -62,8 +66,8 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
-          name: ${{ env.INTERNAL_NAME }}
-          path: dist/stable/${{ env.INTERNAL_NAME }}
+          name: artifact
+          path: dist/stable/XIVITASanctuary
       - name: Commit and Push
         uses: EndBug/add-and-commit@v7
         with:
@@ -71,4 +75,4 @@ jobs:
           author_name: ${{ github.actor }}
           author_email: ${{ github.actor }}@users.noreply.github.com
           branch: ${{ env.BRANCH }}
-          message: Update ${{ env.INTERNAL_NAME }} to ${{ steps.tag_name.outputs.TAG }}
+          message: Update XIVSanctuary to ${{ steps.tag_name.outputs.TAG }}
