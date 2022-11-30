@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3
         
       - name: Validate JSON Syntax
-        uses: limitusus/json-syntax-check@v2
+        uses: limitusus/json-syntax-check@94555527ace7b96df4a600874a4aafd735842780 # v2
         with:
           pattern: "\\.json$"
