@@ -14,10 +14,10 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791 # v2
 
       - name: Lint Codebase
-        uses: github/super-linter@v4
+        uses: github/super-linter@bb2d833b08b6c288608686672b93a8a4589cdc49 # v4
         env:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_YAML: false
